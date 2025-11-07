@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adivinhe a palavra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>Adivinhe a palavra</h1>
+  </header>
+
+  <main class="layout">
+    <!-- Lado esquerdo: jogo -->
+    <section class="card game">
+      <div class="hud">
+        <span id="categoria">Categoria: Frutas</span>
+        <span id="progresso">Palavra 0 de 0</span>
+        <span id="pontos">Pontos: 0</span>
+        <span id="vidas">Vidas: 6</span>
+      </div>
+
+      <div class="imagem">
+        <img id="img-menino" src="assets/menino1.png" alt="Boneco do jogo">
+      </div>
+
+      <div class="controles">
+        <button id="btn_iniciar" class="btn">Iniciar</button>
+        <button id="btn_dica" class="btn alt" disabled>Dica</button>
+      </div>
+
+      <div class="palavra" aria-live="polite">
+        <p id="palavra"></p>
+      </div>
+
+      <div id="box-teclado" class="teclado" role="group" aria-label="Teclado de letras"></div>
+    </section>
+
+    <!-- Lado direito: histórico -->
+    <aside class="card historico">
+      <h3>Palpites</h3>
+      <ul id="lista-historico"></ul>
+    </aside>
+  </main>
+
+  <dialog id="modal">
+    <h2 id="modal-title"></h2>
+    <p id="modal-msg"></p>
+    <div class="acoes">
+      <button id="btn_continuar" class="btn">Continuar</button>
+      <button id="btn_reiniciar" class="btn">Reiniciar</button>
+    </div>
+  </dialog>
+
+  <script src="interacao.js"></script>
+</body>
+</html>
